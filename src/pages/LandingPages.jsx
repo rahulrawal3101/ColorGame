@@ -103,7 +103,7 @@ const LandingPages = () => {
                     </Grid>
 
                     {/* two  */}
-                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: '20px 10px', }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: '20px 10px', overflow:'hidden'}}>
                         <Grid item xs={12} sx={{ textAlign: 'center' }}>
                             <Typography sx={{ color: '#5c6bc0', fontSize: { lg: '32px', md: '28px', sm: '25px', xs: '24px' }, fontWeight: '800', mt: '10px' }}>Why Colorgame</Typography>
 
@@ -177,11 +177,11 @@ const LandingPages = () => {
                     </Grid>
 
                     {/* three  */}
-                    <Grid container sx={{ padding: '10 20px', mt: '10px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+                    <Grid container sx={{ padding: '10 20px', mt: '10px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' ,  overflow:'hidden'}}>
                         <Grid item xs={12} data-aos='fade-up' sx={{ textAlign: 'center', }} >
                             <Typography sx={{ color: '#5c6bc0', fontSize: '23px', fontWeight: '800' }}>Our Games</Typography>
                         </Grid>
-                        <Grid container sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+                        <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
                             <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-right' sx={{ m: '10px' }}>
                                 <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '470px' }}>
