@@ -27,7 +27,7 @@ function App() {
         <Route eaxct path='/twomin' element={<TwoMinGame/>}/>
         <Route exact path='/adminhomepage' element={<AdminHomePage/>}/>
         <Route eaxct path='/twominresult' element={<TwoMinResult/>}/>
-        <Route exact path='/socket' element={<SocketFile/>}/>
+        {/* <Route exact path='/socket' element={<SocketFile/>}/> */}
         <Route exact path='/landingpage' element={<LandingPage/>}/>
         <Route exact path='/landingpages' element={<LandingPages/>}/>
 

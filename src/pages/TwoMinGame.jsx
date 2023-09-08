@@ -1,6 +1,6 @@
-import { Box, Button, Drawer, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import mainbg from '../assets/mainBG.png';
-import React, { useState } from 'react';
+import React, { useContext,useState } from 'react';
 import twoblueball from '../assets/twoBlueBallBG.png';
 import quizbg from '../assets/quizBG.png';
 import walleticon from '../assets/walletIcon.png';
@@ -21,64 +21,63 @@ import redviolet from '../assets/zeroBG.png';
 import greenvoilet from '../assets/fiveBG.png';
 import redbg from '../assets/redbg.png';
 import greenbg from '../assets/green.png';
-import resultmainbg from '../assets/resultMainBG.png';
-import CircleIcon from '@mui/icons-material/Circle';
 import DrawerOpenClose from '../component/DrawerOpenClose';
 import FinalResultComponent from '../component/FinalResultComponent';
+import { context } from '../global/Global_Context';
 
 const numbercolor = [
     {
         color: redviolet,
         text: '0',
-        colorbg :'linear-gradient(180deg, rgba(237,54,54,1) 19%, rgba(194,39,163,1) 66%);'
+        colorbg: 'linear-gradient(180deg, rgba(237,54,54,1) 19%, rgba(194,39,163,1) 66%);'
     },
     {
         color: greenbg,
         text: '1',
-        colorbg:'green'
+        colorbg: 'green'
     },
     {
         color: redbg,
         text: '2',
-        colorbg:'red'
+        colorbg: 'red'
     },
     {
         color: greenbg,
         text: '3',
-        colorbg:'green'
+        colorbg: 'green'
 
     },
     {
         color: redbg,
         text: '4',
-        colorbg:'red'
+        colorbg: 'red'
     },
     {
         color: greenvoilet,
         text: '5',
-        colorbg:'linear-gradient(106deg, rgba(85,228,102,1) 34%, rgba(194,39,163,1) 61%);'
+        colorbg: 'linear-gradient(106deg, rgba(85,228,102,1) 34%, rgba(194,39,163,1) 61%);'
     },
     {
         color: redbg,
         text: '6',
-        colorbg:'red'
+        colorbg: 'red'
     },
     {
         color: greenbg,
         text: '7',
-         colorbg:'green'
+        colorbg: 'green'
 
     },
     {
         color: redbg,
         text: '8',
-        colorbg:'red'
+        colorbg: 'red'
 
     },
     {
         color: greenbg,
         text: '9',
-         colorbg:'green'
+        colorbg: 'green'
     }
 ]
 
@@ -88,29 +87,39 @@ const numbercolor = [
 
 
 const TwoMinGame = () => {
+    const { ques,seconequestion,sectwoquestion,twominquizroomid} = useContext(context)
     const [open, setOpen] = useState(false);
     const [bgcolor, setBgcolor] = useState('');
     const [checkColor, setCheckColor] = useState("")
     
 
-    const checkHandler=({bgcolor,num,text})=>{
+
+    const checkHandler = ({ bgcolor, num, text }) => {
         setOpen(true);
         setBgcolor(bgcolor);
-        
-        if(num=="color"){
+
+        if (num === "color") {
             setCheckColor(text)
         }
-        else{
+        else {
             setCheckColor(text)
         }
     }
-
-
     const h = window.innerHeight;
+
+    
+    // console.log(secOne,secTwo)
+    console.log(ques)
+    console.log(seconequestion,sectwoquestion)
+    
+   
+
+  
     return (
         <>
-            <Grid container sx={{ display: 'flex', justifyContent: 'center', }}>
-                <Grid item lg={3.5} md={5.5} sm={9} xs={12} sx={{ height: `${h}px`, backgroundImage: `url(${mainbg})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', overflowY: 'scroll', height: 'fit-content' }}>
+        <Container disableGutters maxWidth={'xl'} >
+            <Grid container sx={{ justifyContent: 'center', height: `${h}px`}}>
+                <Grid item lg={3.5} md={5.5} sm={9} xs={12} sx={{ height:'fit-content', backgroundImage: `url(${mainbg})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', overflowY: 'scroll',  }}>
                     <Grid container>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: '10px' }}>
                             <Typography sx={{ color: 'white', fontSize: '27px' }}>Color Prediction</Typography>
@@ -168,19 +177,19 @@ const TwoMinGame = () => {
                                 <Box sx={{ border: '1px solid white', width: '70px', borderRadius: '10px', mt: '7px' }}>
                                     <Typography sx={{ color: 'white', fontSize: '12px', textAlign: 'center', mt: '3px' }}>1 Minutes</Typography>
                                 </Box>
-                                <Typography sx={{ fontSize: '18px', fontWeight: '900', color: 'white', mt: '18px' }}>202382420103</Typography>
+                                <Typography sx={{ fontSize: '18px', fontWeight: '900', color: 'white', mt: '18px' }}>{twominquizroomid}</Typography>
 
                             </Box>
                             <Box sx={{ height: '100%', width: '20px', }}>
                                 <Box sx={{ width: '20px', height: '10%', display: 'flex', alignItems: 'flex-start' }}>
-                                    <img src={halfball} height='100%' width={'100%'} />
+                                    <img src={halfball} height='100%' width={'100%'} alt='halfball'/>
 
                                 </Box>
                                 <Box sx={{ width: '20px', height: '80%', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
                                     <img src={dots} alt='dot' height='100%' width={'10%'} />
                                 </Box>
                                 <Box sx={{ width: '20px', height: '10%', display: 'flex', alignItems: 'flex-end' }}>
-                                    <img src={halfball1} height='100%' width={'100%'} />
+                                    <img src={halfball1} height='100%' width={'100%'} alt='halfball'/>
 
                                 </Box>
 
@@ -204,10 +213,10 @@ const TwoMinGame = () => {
                                     </Box>
 
                                     <Box sx={{ backgroundImage: `url(${timerm1})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', padding: '10px', width: '6px', height: '15px', mr: '3px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <Typography sx={{ color: 'white', fontWeight: '900' }}>2</Typography>
+                                        <Typography sx={{ color: 'white', fontWeight: '900' }}>{seconequestion}</Typography>
                                     </Box>
                                     <Box sx={{ backgroundImage: `url(${timerm2})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', padding: '10px', width: '6px', height: '15px', mr: '3px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <Typography sx={{ color: 'white', fontWeight: '900' }}>4</Typography>
+                                        <Typography sx={{ color: 'white', fontWeight: '900' }}>{sectwoquestion}</Typography>
                                     </Box>
                                 </Box>
 
@@ -223,7 +232,7 @@ const TwoMinGame = () => {
                             <Typography sx={{ fontSize: '18px', color: 'white', m: '5px', ml: '8px' }}>Quiz</Typography>
                             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <Box sx={{ backgroundImage: `url(${quizbg})`, backgroundSize: '100% 100%', height: '80px', width: '90%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-                                    <Typography sx={{ color: 'white', fontSize: '18px', fontWeight: '900' }}>What is 10-50/10+2?</Typography>
+                                    <Typography sx={{ color: 'white', fontSize: '18px', fontWeight: '900' }}>{ques}</Typography>
                                     <Typography sx={{ fontSize: '14px', color: 'grey' }}>Click the correct answer below</Typography>
 
                                 </Box>
@@ -240,13 +249,13 @@ const TwoMinGame = () => {
                         <Grid item xs={11.6} sx={{ height: '260px', backgroundImage: `url(${numberbg})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', pb: '10px' }}>
                             <Typography sx={{ textAlign: 'center', color: 'white', mt: '5px' }}>Answers</Typography>
                             <Grid container sx={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
-                                <Grid  onClick={() => { checkHandler({bgcolor:"green",num:"color",text:"Green"})}} item xs={3.5} sx={{ cursor:'pointer',borderRadius: '4px 15px 4px 15px', bgcolor: 'green', color: 'white', padding: '10px' }}>
+                                <Grid onClick={() => { checkHandler({ bgcolor: "green", num: "color", text: "Green" }) }} item xs={3.5} sx={{ cursor: 'pointer', borderRadius: '4px 15px 4px 15px', bgcolor: 'green', color: 'white', padding: '10px' }}>
                                     <Typography sx={{ fontWeight: '900', textAlign: 'center' }}>Green</Typography>
                                 </Grid>
-                                <Grid  onClick={() => { checkHandler({bgcolor:"violet",num:"color",text:"Violet"})}} item xs={3.5} sx={{cursor:'pointer', borderRadius: '4px 15px 4px 15px', bgcolor: 'violet', color: 'white', padding: '10px' }}>
+                                <Grid onClick={() => { checkHandler({ bgcolor: "violet", num: "color", text: "Violet" }) }} item xs={3.5} sx={{ cursor: 'pointer', borderRadius: '4px 15px 4px 15px', bgcolor: 'violet', color: 'white', padding: '10px' }}>
                                     <Typography sx={{ fontWeight: '900', textAlign: 'center' }}>Violet</Typography>
                                 </Grid>
-                                <Grid  onClick={() => { checkHandler({bgcolor:"red",num:"color",text:"Red"})}}item xs={3.5} sx={{cursor:'pointer', borderRadius: '4px 15px 4px 15px', bgcolor: 'red', color: 'white', padding: '10px' }}>
+                                <Grid onClick={() => { checkHandler({ bgcolor: "red", num: "color", text: "Red" }) }} item xs={3.5} sx={{ cursor: 'pointer', borderRadius: '4px 15px 4px 15px', bgcolor: 'red', color: 'white', padding: '10px' }}>
                                     <Typography sx={{ fontWeight: '900', textAlign: 'center' }}>Red</Typography>
                                 </Grid>
                             </Grid>
@@ -254,11 +263,11 @@ const TwoMinGame = () => {
 
                                 <Grid item xs={11.5} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', backgroundImage: `url(${numbersecbg})`, backgroundSize: '100% 100%', padding: '10px', mt: '10px' }}>
                                     {
-                                        numbercolor.map((ele) => {
+                                        numbercolor.map((ele,index) => {
                                             return (
-                                                <Box onClick={() => { checkHandler({bgcolor:ele.colorbg,num:1,text:ele.text})}} sx={{ width: '18%', display: 'flex', justifyContent: 'center', alignItems: 'center', m: '1px', mb: '5px' }}>
+                                                <Box key={index} onClick={() => { checkHandler({ bgcolor: ele.colorbg, num: 1, text: ele.text }) }} sx={{ width: '18%', display: 'flex', justifyContent: 'center', alignItems: 'center', m: '1px', mb: '5px' }}>
 
-                                                    <Box sx={{ cursor:'pointer',backgroundImage: `url(${ele.color})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', padding: '10px', width: '25px', textAlign: 'center', borderRadius: '50%', border: '1px solid white' }} >
+                                                    <Box sx={{ cursor: 'pointer', backgroundImage: `url(${ele.color})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', padding: '10px', width: '25px', textAlign: 'center', borderRadius: '50%', border: '1px solid white' }} >
                                                         <Typography sx={{ fontSize: '16px', color: 'white', fontWeight: '900' }}>{ele.text}</Typography>
                                                     </Box>
                                                 </Box>
@@ -269,11 +278,11 @@ const TwoMinGame = () => {
 
                                 </Grid>
                                 <Grid item xs={11.5} sx={{ height: '45px', mt: '7px', display: 'flex', borderRadius: '20px', pb: '8px', }}>
-                                    <Box  onClick={() => { checkHandler({bgcolor:'#ffab00',num:1,text:"Big"})}}  sx={{cursor:'pointer', width: '50%', bgcolor: '#ffab00', height: '100%', borderRadius: '12px 0px 0px 12px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2px' }}>
+                                    <Box onClick={() => { checkHandler({ bgcolor: '#ffab00', num: 1, text: "Big" }) }} sx={{ cursor: 'pointer', width: '50%', bgcolor: '#ffab00', height: '100%', borderRadius: '12px 0px 0px 12px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2px' }}>
                                         <Typography sx={{ color: 'white', fontSize: '17px', fontWeight: '900' }}>Big</Typography>
 
                                     </Box>
-                                    <Box  onClick={() => { checkHandler({bgcolor:"green",num:1,text:"Small"})}}  sx={{cursor:'pointer', width: '50%', bgcolor: 'green', height: '100%', display: 'flex', justifyContent: 'center', borderRadius: '0px 12px 12px 0px', alignItems: 'center', padding: '2px' }}>
+                                    <Box onClick={() => { checkHandler({ bgcolor: "green", num: 1, text: "Small" }) }} sx={{ cursor: 'pointer', width: '50%', bgcolor: 'green', height: '100%', display: 'flex', justifyContent: 'center', borderRadius: '0px 12px 12px 0px', alignItems: 'center', padding: '2px' }}>
                                         <Typography sx={{ color: 'white', fontSize: '17px', fontWeight: '900' }}>Small</Typography>
 
                                     </Box>
@@ -302,18 +311,19 @@ const TwoMinGame = () => {
                     </Grid>
 
                     {/* section seven  */}
-                    <FinalResultComponent/>
-                    
+                    <FinalResultComponent />
+
                     {/* Mui drawer  */}
 
 
 
-                    <DrawerOpenClose open={open} setOpen={setOpen} bgcolor={bgcolor} setBgcolor={setBgcolor} checkColor={checkColor}/>
+                    <DrawerOpenClose open={open} setOpen={setOpen} bgcolor={bgcolor} setBgcolor={setBgcolor} checkColor={checkColor} />
 
                 </Grid>
 
 
             </Grid>
+            </Container>
         </>
     )
 }

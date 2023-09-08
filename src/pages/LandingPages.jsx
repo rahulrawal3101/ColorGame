@@ -2,8 +2,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Grid, OutlinedInput, Paper, Rating, TextareaAutosize, Typography } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import React, { useContext, useEffect } from 'react';
-import signup from '../assets/game7.jpeg';
+import React, { useEffect } from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CallIcon from '@mui/icons-material/Call';
 import CircleIcon from '@mui/icons-material/Circle';
@@ -19,16 +18,14 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import av1 from '../assets/av1.avif';
 import av2 from '../assets/av2.avif';
 import av3 from '../assets/av3.avif';
-import game from '../assets/game3.jpeg';
-import game1 from '../assets/game1.jpeg';
-import game2 from '../assets/game2.jpeg';
-import game3 from '../assets/game3.jpeg';
-import game4 from '../assets/game4.jpeg';
-import game5 from '../assets/game5.jpeg';
-import game6 from '../assets/game6.jpeg';
-import game7 from '../assets/game7.jpeg';
+import game1 from '../assets/game1.png';
+import game2 from '../assets/game2.png';
+import game3 from '../assets/game3.png';
+import game4 from '../assets/game4.png';
+import game5 from '../assets/game5.png';
+import game6 from '../assets/game6.png';
+import game7 from '../assets/game7.png';
 import quote from '../assets/quote.png';
-// import { context } from '../global/GlobalContext';
 import './master.css'
 
 
@@ -50,7 +47,7 @@ const LandingPages = () => {
                                 <Typography sx={{ color: '#cddc39', fontSize: '19px', fontWeight: '800' }}>l</Typography>
                                 <Typography sx={{ color: '#673ab7', fontSize: '19px', fontWeight: '800' }}>o</Typography>
                                 <Typography sx={{ color: '#ef6c00', fontSize: '19px', fontWeight: '800' }}>r</Typography>
-                                <Typography sx={{ color: '#e91e63', fontSize: '19px', fontWeight: '800' }}>g</Typography>
+                                <Typography sx={{ color: '#e91e63', fontSize: '19px', fontWeight: '800' }}>G</Typography>
                                 <Typography sx={{ color: '#0d47a1', fontSize: '19px', fontWeight: '800' }}>a</Typography>
                                 <Typography sx={{ color: '#d50000', fontSize: '19px', fontWeight: '800' }}>m</Typography>
                                 <Typography sx={{ color: '#673ab7', fontSize: '19px', fontWeight: '800' }}>e</Typography>
@@ -89,12 +86,12 @@ const LandingPages = () => {
                     <Grid container sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap-reverse', background: 'linear-gradient(166deg, rgba(250,250,250,1) 51%, rgba(153,162,218,1) 53%)', p: '20px 5px', }}>
                         <Grid item lg={6} md={6} sm={12} xs={12} data-aos='fade-up' sx={{ mt: '40px' }} >
                             <Typography sx={{ color: '#5c6bc0', fontSize: { lg: '32px', md: '28px', sm: '25px', xs: '23px' }, fontWeight: '800', textAlign: 'center' }}>Colorgame is One Of The Best colour Predictions in India.</Typography>
-                            <Typography sx={{ fontSize: '15px', mt: '5px', textAlign: 'center' }}>Colorgame allows you to earn money by guessing the correct colours. The amount earned can be withdrawn through Paytm.</Typography>
+                            <Typography sx={{ fontSize: '15px', mt: '5px', textAlign: 'center' }}>ColorGame allows you to earn money by guessing the correct colours. The amount earned can be withdrawn through Paytm.</Typography>
                         </Grid>
 
                         <Grid item data-aos='fade-up' lg={6} md={6} sm={12} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <Box sx={{ width: { lg: '40%', md: '50%', sm: '40%', xs: '60%' }, height: '470px', }}>
-                                <img src={game3} width={'100%'} height={'100%'} alt='game1' style={{ borderRadius: '10px' }} />
+                            <Box sx={{ width: { lg: '50%', md: '55%', sm: '55%', xs: '100%' }, height: '500px', }}>
+                                <img src={game1} width={'100%'} height={'100%'} alt='game1' style={{ borderRadius: '10px' }} />
                             </Box>
 
                         </Grid>
@@ -162,7 +159,7 @@ const LandingPages = () => {
 
                             </Grid>
                             <Grid item data-aos='fade-left' lg={6} md={6} sm={12} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: { lg: '0px', md: '0px', sm: '10px', xs: '10px' } }}>
-                                <Box sx={{ width: { lg: '40%', md: '50%', sm: '40%', xs: '60%' }, height: '470px', }}>
+                                <Box sx={{ width: {lg: '50%', md: '55%', sm: '55%', xs: '100%' }, height: '490px', }}>
                                     <img src={game5} width={'100%'} height={'100%'} alt='game5' style={{ borderRadius: '10px' }} />
                                 </Box>
 
@@ -183,15 +180,15 @@ const LandingPages = () => {
                         </Grid>
                         <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-right' sx={{ m: '10px' }}>
-                                <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '470px' }}>
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-right' sx={{ m: '10px' }}>
+                                <Box sx={{ width: { lg: '100%', md: '100%', sm: '100%', xs: '100%' }, height: '490px' }}>
                                     <img src={game7} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
 
                                 </Box>
 
                             </Grid>
 
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-left' sx={{ m: '10px' }}>
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-left' sx={{ m: '10px' }}>
                                 <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
                                     <img src={game6} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
 
@@ -199,7 +196,7 @@ const LandingPages = () => {
 
                             </Grid>
 
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-right' sx={{ m: '10px' }}>
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-right' sx={{ m: '10px' }}>
                                 <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
                                     <img src={game5} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
 
@@ -207,7 +204,7 @@ const LandingPages = () => {
 
                             </Grid>
 
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-left' sx={{ m: '10px' }}>
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-left' sx={{ m: '10px' }}>
                                 <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
                                     <img src={game4} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
 
@@ -215,7 +212,15 @@ const LandingPages = () => {
 
                             </Grid>
 
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-right' sx={{ m: '10px' }}>
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-right' sx={{ m: '10px' }}>
+                                <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
+                                    <img src={game3} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
+
+                                </Box>
+
+                            </Grid>
+
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-left' sx={{ m: '10px' }}>
                                 <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
                                     <img src={game2} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
 
@@ -223,17 +228,9 @@ const LandingPages = () => {
 
                             </Grid>
 
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-left' sx={{ m: '10px' }}>
+                            <Grid item lg={3.2} md={4} sm={5.5} xs={11} data-aos='fade-right' sx={{ m: '10px' }}>
                                 <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
                                     <img src={game1} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
-
-                                </Box>
-
-                            </Grid>
-
-                            <Grid item lg={3} md={4} sm={4} xs={8} data-aos='fade-right' sx={{ m: '10px' }}>
-                                <Box sx={{ width: { lg: '90%', md: '90%', sm: '100%', xs: '100%' }, height: '490px' }}>
-                                    <img src={game3} width={'100%'} height={'100%'} alt='register' style={{ borderRadius: '10px' }} />
 
                                 </Box>
 
@@ -265,9 +262,9 @@ const LandingPages = () => {
                             <Grid item xs={12} sx={{ mt: "10px" }}>
                                 <Grid container sx={{}} wrap='wrap-reverse'>
                                     <Grid item xs={12} sm={12} md={6} lg={6} sx={{ mt: "20px",display: "flex", justifyContent: "center",alignItems:'center' }} data-aos="fade-right">
-                                        <Box sx={{  width: { lg: '49%', md: '65%', sm: '39%', xs: '73%' }, height: '490px' }}>
+                                        <Box sx={{  width: { lg: '50%', md: '65%', sm: '50%', xs: '100%' }, height: '490px' }}>
 
-                                            <img src={signup} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} />
+                                            <img src={game7} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} alt='game7' />
                                         </Box>
                                     </Grid>
 
@@ -295,9 +292,9 @@ const LandingPages = () => {
                                         </Box>
                                     </Grid>
                                     <Grid item xs={12} sm={12} md={6} lg={6} sx={{ mt: "20px",display: "flex", justifyContent: "center",alignItems:'center' }} data-aos="fade-right">
-                                        <Box sx={{  width: { lg: '49%', md: '65%', sm: '39%', xs: '73%' }, height: '490px' }}>
+                                        <Box sx={{  width: { lg: '50%', md: '65%', sm: '50%', xs: '100%'  }, height: '490px' }}>
 
-                                        <img src={game6} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} />
+                                        <img src={game6} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} alt='game6'/>
                                         </Box>
                                     </Grid>
                                 </Grid>
@@ -307,9 +304,9 @@ const LandingPages = () => {
                             <Grid item xs={12} sx={{ mt: "10px" }}>
                                 <Grid container sx={{}} wrap='wrap-reverse'>
                                 <Grid item xs={12} sm={12} md={6} lg={6} sx={{ mt: "20px",display: "flex", justifyContent: "center",alignItems:'center' }} data-aos="fade-right">
-                                        <Box sx={{  width: { lg: '49%', md: '65%', sm: '39%', xs: '73%' }, height: '490px' }}>
+                                        <Box sx={{  width: { lg: '50%', md: '65%', sm: '50%', xs: '100%'  }, height: '490px' }}>
 
-                                        <img src={game5} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} />
+                                        <img src={game5} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} alt='game5'/>
                                         </Box>
                                     </Grid>
 
@@ -336,9 +333,9 @@ const LandingPages = () => {
                                         </Box>
                                     </Grid>
                                     <Grid item xs={12} sm={12} md={6} lg={6} sx={{ mt: "20px",display: "flex", justifyContent: "center",alignItems:'center' }} data-aos="fade-right">
-                                        <Box sx={{  width: { lg: '49%', md: '65%', sm: '39%', xs: '73%' }, height: '490px' }}>
+                                        <Box sx={{  width: { lg: '50%', md: '65%', sm: '50%', xs: '100%'  }, height: '490px' }}>
 
-                                        <img src={game4} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} />
+                                        <img src={game4} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} alt='game4' />
                                         </Box>
                                     </Grid>
                                 </Grid>
@@ -349,9 +346,9 @@ const LandingPages = () => {
                             <Grid item xs={12} sx={{ mt: "10px" }}>
                                 <Grid container sx={{}} wrap='wrap-reverse'>
                                 <Grid item xs={12} sm={12} md={6} lg={6} sx={{ mt: "20px",display: "flex", justifyContent: "center",alignItems:'center' }} data-aos="fade-right">
-                                        <Box sx={{  width: { lg: '49%', md: '65%', sm: '39%', xs: '73%' }, height: '490px' }}>
+                                        <Box sx={{  width: { lg: '50%', md: '65%', sm: '50%', xs: '100%'  }, height: '490px' }}>
 
-                                        <img src={game} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} />
+                                        <img src={game1} height={"100%"} width={"100%"} style={{ borderRadius: '10px' }} alt='game1'/>
                                         </Box>
                                     </Grid>
 
@@ -386,7 +383,7 @@ const LandingPages = () => {
                                             <Box sx={{ m: "7px", transition: "transform 0.3s ease", '&:hover': { transform: "scale(1.1)", } }}>
                                                 <Paper sx={{ height: "400px", width: "250px", p: "10px", m: "7px" }} elevation={3}>
                                                     <Typography align='center' sx={{ p: "10px" }}>
-                                                        <img src={quote} alt="quote" height="50px" width="50px" />
+                                                        <img src={quote} alt="quote" height="50px" width="50px" altquote/>
                                                     </Typography>
                                                     <Box sx={{ height: "43%" }}>
                                                         <Typography align='center' sx={{ fontSize: "18px", fontWeight: "500" }}>“One of the best social media agency in Delhi. They manage social media of their clients with skills. Have great knowledge on paid advertisements. Most recommended advertising agency.”</Typography>
@@ -395,7 +392,7 @@ const LandingPages = () => {
                                                         <Box sx={{ borderRadius: "50px", mt: "40px" }}>
                                                             <Box sx={{ width: "fit-content", display: "flex", alignItems: "center" }}>
                                                                 <Box sx={{ borderRadius: "50px", height: "45px", width: "45px", overflow: "hidden" }}>
-                                                                    <img src={av1} alt="sr" height={"100%"} width={"100%"} />
+                                                                    <img src={av1} alt="sr" height={"100%"} width={"100%"}/>
                                                                 </Box>
 
                                                                 <Typography sx={{ fontSize: "15px", fontWeight: "700", ml: "10px", width: "fit-content" }}>Sanjay singh</Typography>

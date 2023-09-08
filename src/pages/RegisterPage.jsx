@@ -98,15 +98,16 @@ const RegisterPage = () => {
                     dispatch({
                         type: REGISTER_API_STOPLOADING
                     });
-                    if (resp.data.message == "Registraton Success") {
+                    if (resp.data.message === "Registraton Success") {
                         dispatch({ type: LOGIN_TAB });
                     }
-                    if (resp.data.message == 'Already This Email is Register With Us') {
+                    if (resp.data.message === 'Already This Email is Register With Us') {
                         alert(resp.data.message);
                     }
-                    if (resp.data.message == 'Failed To Register') {
+                    if (resp.data.message === 'Failed To Register') {
                         alert(resp.data.message)
                     }
+                    
                 }).catch((err) => {
                     dispatch({
                         type: REGISTER_API_STOPLOADING
@@ -222,11 +223,11 @@ const RegisterPage = () => {
                 </Grid>
 
                 {/* signup btn */}
-                {isRegisterApiLoading ? <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 'px', padding: '8px', mb: '90px' }}>
+                {isRegisterApiLoading ? <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 'px', padding: '8px', mb: '20px' }}>
                     <Button variant='contained' disabled={true} sx={{ color: 'white', padding: '10px 30px', fontSize: '14px', fontWeight: '600', '&:hover': {  color: 'white' } }} >Please Wait</Button>
                 </Grid>
                     :
-                    <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 'px', padding: '8px', mb: '90px' }}>
+                    <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 'px', padding: '8px', mb: '20px' }}>
                         <Button sx={{ color: 'white', bgcolor: 'green', padding: '10px 30px', fontSize: '14px', fontWeight: '600', '&:hover': { bgcolor: 'green', color: 'white' } }} onClick={RegisterSubmit}>Register</Button>
                     </Grid>}
             </Grid>

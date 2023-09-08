@@ -35,10 +35,28 @@ export const reducer = (state, action) => {
             return { ...state, isVerifyApiLoading: false }
 
         case "GET_LOCAL_TOKEN":
-            return {...state,isUserLoggedIn:action.payload}
+            return { ...state, isUserLoggedIn: action.payload }
 
         case 'LOG_OUT':
-            return {...state,isUserLoggedIn:false}    
+            return { ...state, isUserLoggedIn: false }
+
+        case 'QUESTION':
+            return { ...state, ques: action.payload }
+
+        case 'SECONE':
+            return { ...state, seconequestion: action.payload }
+
+        case 'SECTWO':
+            return { ...state, sectwoquestion: action.payload }
+
+        case 'TWOMINQUIZID':
+            return { ...state, twominquizroomid: action.payload }
+
+        case 'TWOMINRESULT':
+            return { ...state, twominquizresult: action.payload }
+
+         case 'FINALRESULTANSWERS':
+            return {...state,finalresultshow:action.payload}   
 
         default:
             return { ...state };

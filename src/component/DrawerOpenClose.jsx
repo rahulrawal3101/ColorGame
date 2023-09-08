@@ -46,7 +46,7 @@ const DrawerOpenClose = ({ open, setOpen,bgcolor,checkColor}) => {
     >
       <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: 'black' ,}}>
 
-        <Grid lg={12} md={12} sm={12} xs={12} sx={{ width: '100%', }}>
+        <Grid item lg={12} md={12} sm={12} xs={12} sx={{ width: '100%', }}>
           {/* section one  */}
           <Grid Container sx={{ background:bgcolor, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '15px', borderRadius: '12px 12px 0px 0px' }}>
             <Grid item xs={12} sx={{ padding: '5px', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>

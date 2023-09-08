@@ -1,136 +1,15 @@
 import { Box, Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import resultmainbg from '../assets/resultMainBG.png';
 import quizbg from '../assets/quizBG.png';
+import { context } from '../global/Global_Context';
 
 
-const resultData = [
-    {
-        period: '20238267378',
-        number: 2,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 3,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 5,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 9,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 0,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 2,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 7,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 5,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 6,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 2,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 3,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 5,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 9,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 0,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 2,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 7,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 5,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 2,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-    {
-        period: '20238267378',
-        number: 7,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'red' }} />
-    },
-    {
-        period: '20238267378',
-        number: 9,
-        size: 'Small',
-        color: <CircleIcon sx={{ fontSize: '10px', color: 'green' }} />
-    },
-
-
-]
 
 const FinalResultComponent = () => {
+    const {  finalresultshow } = useContext(context)
+    console.log(finalresultshow)
     return (
         <>
             {/* last few results  */}
@@ -166,21 +45,32 @@ const FinalResultComponent = () => {
                             <Box sx={{ width: '100%', border: '1px solid white', height: '300px', overflowY: 'scroll', }}>
 
                                 {
-                                    resultData.map((ele) => {
+                                    finalresultshow.map((ele, index) => {
                                         return (
 
-                                            <Grid container sx={{ borderBottom: '0.5px solid grey', padding: '8px' }}>
+                                            <Grid key={index} container sx={{ borderBottom: '0.5px solid grey', padding: '8px' }}>
                                                 <Grid item xs={4.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.period}</Typography>
+                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.roomID}</Typography>
                                                 </Grid>
                                                 <Grid item xs={2.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.number}</Typography>
+                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.resultNumber}</Typography>
                                                 </Grid>
                                                 <Grid item xs={2.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.size}</Typography>
+                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.resultSize}</Typography>
                                                 </Grid>
                                                 <Grid item xs={2.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>{ele.color}</Typography>
+                                                    <Typography sx={{ color: 'white', fontSize: '14px', }}>
+                                                       
+                                                      {
+                                                        ele.resultColor === "Green" || ele.resultColor === "Red"?
+                                                        <CircleIcon sx={{ fontSize: '10px', color:ele.resultColor }} />:
+                                                        <>
+                                                        <CircleIcon sx={{ fontSize: '10px', color:ele.resultColor==="GV"?"green":"red" }} />
+                                                        <CircleIcon sx={{ fontSize: '10px', color:"violet" }} />
+                                                        </>
+                                                      }
+
+                                                    </Typography>
                                                 </Grid>
                                             </Grid>
                                         )
